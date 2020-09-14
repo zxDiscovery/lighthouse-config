@@ -2,6 +2,7 @@ approve:
 - lgtm_acts_as_approve: false
   repos:
   - zxDiscovery/lighthouse-config
+  - zxDiscovery/hello
   require_self_approval: true
 config_updater:
   gzip: false
@@ -15,3 +16,6 @@ plugins:
   - config-updater
   - approve
   - lgtm  
+  zxDiscovery/hello:
+  - approve
+  - lgtm
