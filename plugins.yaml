@@ -17,5 +17,6 @@ plugins:
   - approve
   - lgtm  
   zxDiscovery/hello:
+  - config-updater
   - approve
   - lgtm
