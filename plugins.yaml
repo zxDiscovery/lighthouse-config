@@ -1,5 +1,5 @@
 approve:
-- lgtm_acts_as_approve: false
+- lgtm_acts_as_approve: true
   repos:
   - zxDiscovery/lighthouse-config
   - zxDiscovery/hello
@@ -10,13 +10,20 @@ config_updater:
     config.yaml:
       name: config
     plugins.yaml:
-      name: plugins  
+      name: plugins
+triggers:
+- repos:
+  - zxDiscovery/hello
+  ignore_ok_to_test: false
+  elide_skipped_contexts: false
 plugins:
   zxDiscovery/lighthouse-config:
   - config-updater
   - approve
-  - lgtm  
+  - lgtm
+  - trigger
   zxDiscovery/hello:
   - config-updater
   - approve
   - lgtm
+  - trigger
