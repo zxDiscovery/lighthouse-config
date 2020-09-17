@@ -1,10 +1,9 @@
 pod_namespace: lighthouse
 prowjob_namespace: lighthouse
-postsubmits:
+presubmits:
   zxDiscovery/hello:
     - agent: tekton-pipeline
-      branches:
-        - master
+      always_run: true
       context: hello
       name: hello
       pipeline_run_spec:
